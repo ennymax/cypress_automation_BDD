@@ -1,0 +1,37 @@
+{
+  "name": "myls-cypress-automation",
+  "version": "1.0.0",
+  "description": "Automation Project using Cypress and Cucumber",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress run --browser chrome",
+    "test:open": "cypress open"
+  },
+  "keywords": [
+    "cypress",
+    "cucumber",
+    "automation"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@faker-js/faker": "^8.4.1",
+    "cypress": "^13.14.1",
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "cypress-downloadfile": "^1.2.4",
+    "cypress-xpath": "^2.0.1",
+    "esbuild-plugin-polyfill-node": "^0.3.0"
+  },
+  "cypress-cucumber-preprocessor": {
+    "stepDefinitions": "cypress/support/steps/**/*.{js,ts}",
+    "filterSpecs": true,
+    "omitFiltered": true,
+    "nonGlobalStepDefinitions": true
+  },
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^20.1.2",
+    "cypress-real-events": "^1.13.0",
+    "dotenv": "^16.4.5",
+    "rgb-hex": "^4.1.0"
+  }
+}
